@@ -11,6 +11,26 @@ def gen_person():
     while len(name) !=5
        name+=choice(letters)
        tel+=choice(nums)
+    
+    person={
+        'name'=name,
+        'tel'=tel
+    }
+
+    return person
+
+def write_person(person_dict):
+    try:
+        data=json.load(open('persons.json'))
+    except:
+        data=[]
+    data.append(person_dict)
+
+    with open('persons.json', 'w') as file:
+        json.dump(data, file, indent, ensure_ascii=False)
+
+
+
 
 
 
