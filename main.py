@@ -5,4 +5,3 @@ if __name__ == '__main__':
     conf = Config()
     print(conf.get_json_string())
 
-# config.config
