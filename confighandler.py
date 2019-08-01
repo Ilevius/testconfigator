@@ -2,9 +2,15 @@ import json
 from random import choice
 
 
-def gen_person():
-    name=''
-    tel=''
+def create_config():
+    token=''
+    secret-key=''
+    auth-token=''
+    secret-key=''
+    connectionString=''
+    version='1.0.0'
+    conftypes=['Production','Develop']
+
     letters=['a','b','c']
     nums=['1','2','3']
 
@@ -12,14 +18,27 @@ def gen_person():
        name+=choice(letters)
        tel+=choice(nums)
     
-    person={
-        'name': name,
-        'tel': tel
+    vkapi={
+        'token': token,
+        'secret-key': secret-key,
+        'auth-token': auth-token,
+        'secret-key': secret-key
     }
+
+    database={
+        'connectionString': connectionString
+    }
+
+    config={
+        'version': version,   
+        'vkapi': vkapi,
+        'database': database
+    }
+
 
     return person
 
-def write_json(person_dict):
+def write_json(person_dict):# Writes a list as the argument into the file. If file doesn't exist it will be created.
     try:
         data=json.load(open('persons.json'))
     except:
@@ -37,12 +56,10 @@ def write_json(person_dict):
 
 
 
-
-
 def main():
     persons=[]
     for i in range(5):
-        write_json(gen_person())
+        write_json(create_config())
 
 
 
