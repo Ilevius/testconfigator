@@ -1,23 +1,14 @@
 import json
-from random import choice
 
 version='1.0.0'
 
 def create_config_unit():
-    token=''
-    secretkey=''
-    authtoken=''
-    groupid=''
-    connectionString=''
+    token=input('Введите token \n')
+    secretkey=input('Введите secret-key \n')
+    authtoken=input('Введите auth-token \n')
+    groupid=input('Введите group-id\n')
+    connectionString=input('Введите connectionString\n')
 
-    numletters=['a','b','c','1','2','3']
-
-    while len(token) !=5:
-        token+=choice(numletters)
-        secretkey+=choice(numletters)
-        authtoken+=choice(numletters)
-        groupid+=choice(numletters)
-        connectionString+=choice(numletters)
     
     vkapi={
         'token': token,
@@ -45,7 +36,7 @@ def create_config():
     }
     return config
 
-def write_json(person_dict):# Writes a list as the argument into the file. If file doesn't exist it will be created.
+def read_config():# Writes a list as the argument into the file. If file doesn't exist it will be created.
     try:
         data=json.load(open('config.json'))
     except:
@@ -56,7 +47,7 @@ def write_json(person_dict):# Writes a list as the argument into the file. If fi
 
 
 def main():
-    write_json(create_config())
+    read_config()
 
 
 
