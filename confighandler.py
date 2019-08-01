@@ -8,18 +8,18 @@ def gen_person():
     letters=['a','b','c']
     nums=['1','2','3']
 
-    while len(name) !=5
+    while len(name) !=5:
        name+=choice(letters)
        tel+=choice(nums)
     
     person={
-        'name'=name,
-        'tel'=tel
+        'name': name,
+        'tel': tel
     }
 
     return person
 
-def write_person(person_dict):
+def write_json(person_dict):
     try:
         data=json.load(open('persons.json'))
     except:
@@ -27,7 +27,7 @@ def write_person(person_dict):
     data.append(person_dict)
 
     with open('persons.json', 'w') as file:
-        json.dump(data, file, indent, ensure_ascii=False)
+        json.dump(data, file, indent=2, ensure_ascii=False)
 
 
 
