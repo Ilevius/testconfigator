@@ -6,23 +6,24 @@ def create_config():
     token=''
     secret-key=''
     auth-token=''
-    secret-key=''
+    group-id=''
     connectionString=''
     version='1.0.0'
-    conftypes=['Production','Develop']
 
-    letters=['a','b','c']
-    nums=['1','2','3']
+    numletters=['a','b','c','1','2','3']
 
     while len(name) !=5:
-       name+=choice(letters)
-       tel+=choice(nums)
+        token+=choice(numletters)
+        secret-key+=choice(numletters)
+        auth-token+=choice(numletters)
+        group-id+=choice(numletters)
+        connectionString+=choice(numletters)
     
     vkapi={
         'token': token,
         'secret-key': secret-key,
         'auth-token': auth-token,
-        'secret-key': secret-key
+        'group-id': group-id
     }
 
     database={
