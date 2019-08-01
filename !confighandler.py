@@ -36,7 +36,9 @@ def create_config():
     }
     return config
 
-def read_config():# Writes a list as the argument into the file. If file doesn't exist it will be created.
+def read_config():
+    # Writes a list as the argument into the file. 
+    # If file doesn't exist it will be created.
     try:
         data=json.load(open('config.json'))
     except:
@@ -51,5 +53,5 @@ def main():
 
 
 
-if __name__=='__main__':
-    main()
+# if __name__=='__main__':
+#     main()
