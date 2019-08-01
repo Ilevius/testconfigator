@@ -1,14 +1,14 @@
 import json
 from random import choice
 
+version='1.0.0'
 
-def create_config():
+def create_config_unit():
     token=''
     secret-key=''
     auth-token=''
     group-id=''
     connectionString=''
-    version='1.0.0'
 
     numletters=['a','b','c','1','2','3']
 
@@ -16,28 +16,34 @@ def create_config():
         token+=choice(numletters)
         secret-key+=choice(numletters)
         auth-token+=choice(numletters)
-        group-id+=choice(numletters)
+        groupid+=choice(numletters)
         connectionString+=choice(numletters)
     
     vkapi={
         'token': token,
         'secret-key': secret-key,
         'auth-token': auth-token,
-        'group-id': group-id
+        'group-id': groupid
     }
 
     database={
         'connectionString': connectionString
     }
 
-    config={
-        'version': version,   
+    config_unit={   
         'vkapi': vkapi,
         'database': database
     }
 
+    return config_unit
 
-    return person
+def create_config():
+    config={
+        'version':version,
+        'Production':create_config_unit(),
+        'Develop':create_config_unit()
+    }
+
 
 def write_json(person_dict):# Writes a list as the argument into the file. If file doesn't exist it will be created.
     try:
