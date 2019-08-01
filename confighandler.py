@@ -40,7 +40,9 @@ def write_person(person_dict):
 
 
 def main():
-    gen_person()
+    persons=[]
+    for i in range(5):
+        write_json(gen_person())
 
 
 
