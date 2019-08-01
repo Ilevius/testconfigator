@@ -5,24 +5,24 @@ version='1.0.0'
 
 def create_config_unit():
     token=''
-    secret-key=''
-    auth-token=''
-    group-id=''
+    secretkey=''
+    authtoken=''
+    groupid=''
     connectionString=''
 
     numletters=['a','b','c','1','2','3']
 
-    while len(name) !=5:
+    while len(token) !=5:
         token+=choice(numletters)
-        secret-key+=choice(numletters)
-        auth-token+=choice(numletters)
+        secretkey+=choice(numletters)
+        authtoken+=choice(numletters)
         groupid+=choice(numletters)
         connectionString+=choice(numletters)
     
     vkapi={
         'token': token,
-        'secret-key': secret-key,
-        'auth-token': auth-token,
+        'secret-key': secretkey,
+        'auth-token': authtoken,
         'group-id': groupid
     }
 
@@ -56,9 +56,7 @@ def write_json(person_dict):# Writes a list as the argument into the file. If fi
 
 
 def main():
-    persons=[]
-    for i in range(5):
-        write_json(create_config())
+    write_json(create_config())
 
 
 
