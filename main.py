@@ -10,3 +10,5 @@ if __name__ == '__main__':
     conf = Config(configcontent)
 
     print(conf.Develop.db.connection_string)
+    print(conf.Develop.vkapi.token)
+    print(conf.Production.db.connection_string)
