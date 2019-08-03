@@ -1,9 +1,10 @@
 from .iUnit import IUnit
 
 class VK_API(IUnit):
-    def __init__(self,unitkind):
+    def __init__(self,unitkind,source_convey_layer3):
+        self.token=source_convey_layer3[unitkind]['vkapi']['token']
+
         pass
-    token='token'
     secret_key='secret_key'
     auth_token='auth_token'
     group_id='group_id'

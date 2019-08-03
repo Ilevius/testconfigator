@@ -8,4 +8,5 @@ if __name__ == '__main__':
     print('\n ******Next step*****!\n')
     
     conf = Config(configcontent)
-    print(conf.get_json_string())
+
+    print(conf.Develop.db.connection_string)
