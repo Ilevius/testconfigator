@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "Production": {
+    "vkapi": {
+      "token": "1",
+      "secret-key": "2",
+      "auth-token": "3",
+      "group-id": "4"
+    },
+    "database": {
+      "connectionString": "5"
+    }
+  },
+  "Develop": {
+    "vkapi": {
+      "token": "6",
+      "secret-key": "7",
+      "auth-token": "8",
+      "group-id": "9"
+    },
+    "database": {
+      "connectionString": "10"
+    }
+  }
+}

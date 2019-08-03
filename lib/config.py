@@ -8,13 +8,17 @@ import json
 from .iConfig import IConfig
 from .vkapi import VK_API
 from .db import DB
+from .Unit import unit
 
-class Config(IConfig):    
-    _version = '1.0.0' 
-    _vk_api =  VK_API().get_json()
-    _database  =  DB().get_json()
+class Config(IConfig):
+    def __init__(self, configcontent)    
+        self.version = '1.0.0'
+        self.Develop = unit("Develop", configcontent)
+        self.Production = unit("Production", configcontent) 
+    _vk_api =  VK_API('').get_json()
+    _database  =  DB('').get_json()
     config = {
-        'version':_version ,
+        'version':version ,
         'vk_api': _vk_api,
         'database':_database
     }    

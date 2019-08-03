@@ -1,0 +1,11 @@
+from .iUnit import IUnit
+from .vkapi import VK_API
+from .db import DB
+
+class unit():
+    """This class unites in its attributes instancies of the classes VK_API and DB. 
+    These classes are provided with argument(unitkind) in order to distinguish develop/production records"""
+    def __init__(self,unitkind,configcontent):
+       self.vkapi = VK_API(unitkind)
+       self.db = DB(unitkind, configcontent)
+

@@ -1,6 +1,8 @@
 from .iUnit import IUnit
 
 class VK_API(IUnit):
+    def __init__(self,unitkind):
+        pass
     token='token'
     secret_key='secret_key'
     auth_token='auth_token'
