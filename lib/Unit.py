@@ -1,4 +1,3 @@
-from .iUnit import IUnit
 from .vkapi import VK_API
 from .db import DB
 

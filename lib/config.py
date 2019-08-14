@@ -5,8 +5,6 @@
     т.е. метод def get_json_string(self) должен быть реализован
 '''
 import json
-from .vkapi import VK_API
-from .db import DB
 from .Unit import unit
 
 class Config():
