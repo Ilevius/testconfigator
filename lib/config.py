@@ -8,7 +8,8 @@ from .Unit import unit
 
 class Config():
     def __init__(self, source_convey_layer1):    
-        self.version = '1.0.0'
+        self.softwareversion = '1.0.0'
+        self.fileversion=source_convey_layer1['version']
         self.Develop = unit("Develop", source_convey_layer1)
         self.Production = unit("Production", source_convey_layer1) 
 
