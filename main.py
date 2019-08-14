@@ -7,4 +7,3 @@ if __name__ == '__main__':
     configfile.close()
     conf = Config(configcontent)
     print('\n ******  Welcome to confighandler version: {}! File version: {}.  *****!\n'.format(conf.softwareversion,conf.fileversion))
-
