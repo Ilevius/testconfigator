@@ -6,7 +6,7 @@
 import json
 from .Unit import unit
 
-class Config():
+class config():
     def __init__(self, source_convey_layer1):    
         self.softwareversion = '1.0.0'
         self.fileversion=source_convey_layer1['version']
