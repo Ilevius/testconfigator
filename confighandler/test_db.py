@@ -2,6 +2,8 @@ from .db import DB
 import pytest
 import json
 
+'''You can start it with typing: pytest -v -s'''
+
 configcontent=None
 def setup_module(module):
     global configcontent
@@ -16,3 +18,5 @@ def setup_module(module):
 def test_db(recordkind, result):
     db_inst=DB(recordkind,configcontent)
     assert db_inst.connection_string == result
+
+
