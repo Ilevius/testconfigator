@@ -13,5 +13,9 @@ class config():
         self.Develop = unit("Develop", source_convey_layer1)
         self.Production = unit("Production", source_convey_layer1) 
 
-
-        
+def readconfig(pathtoconfig='config.json'):
+    configfile=open(pathtoconfig, mode='r')
+    configcontent=json.load(configfile)
+    configfile.close()
+    conf = config(configcontent)
+    return conf
